@@ -14,7 +14,7 @@ const forecast = (latitude, longtitude, callback) => {
     } else {
       callback(
         undefined,
-        `${body.currently.summary}.It is currently ${body.currently.temperature} degree out. There is a ${body.currently.precipProbability}% chance of rain.`
+        `${body.currently.summary}.It is currently ${body.currently.temperature}c degree out.Today's high temperature is ${body.daily.data[0].temperatureHigh} and low temperature is ${body.daily.data[0].temperatureLow}. There is a ${body.currently.precipProbability}% chance of rain.`
       );
     }
   });
