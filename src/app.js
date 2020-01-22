@@ -88,8 +88,6 @@ app.get("/products", (req, res) => {
       error: "You mus provide a search terms"
     });
   } else {
-    console.log(req.query.search);
-
     res.send({
       products: []
     });
