@@ -8,6 +8,7 @@ const geocode = require("./utils/geocode");
 //console.log(path.join(__dirname, "../public"));
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Define path for express cinfig
 const viewsPath = path.join(__dirname, "../templates/views");
@@ -112,4 +113,4 @@ app.get("*", (req, res) => {
 // app.com/help
 // app.com/about
 
-app.listen(3000, console.log("Server is running on port 3000"));
+app.listen(PORT, console.log("Server is running on port 3000"));
