@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "../public")));
 app.get("/", (req, res) => {
   res.render("index.hbs", {
     title: "Weather App",
-    name: "Andrew Mead",
+    name: "Nobu",
     arr: ["one", "two", "three"],
     objArr: [
       {
@@ -42,14 +42,14 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help Page",
     msg: "Please read a instruction carefully",
-    name: "Andrew Mead"
+    name: "Nobu"
   });
 });
 
 app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Page",
-    name: "Andrew Mead"
+    name: "Nobu"
   });
 });
 
@@ -98,14 +98,14 @@ app.get("/products", (req, res) => {
 app.get("/help/*", (req, res) => {
   res.render("404page", {
     title: "Help page not found 404 !!!",
-    name: "Andrew Mead"
+    name: "Nobu"
   });
 });
 
 app.get("*", (req, res) => {
   res.render("404page", {
     title: "404 page not found",
-    name: "Andrew Mead"
+    name: "Nobu"
   });
 });
 
