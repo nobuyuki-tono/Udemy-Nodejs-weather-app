@@ -1,9 +1,10 @@
 const request = require("request");
-const dotenv = require("dotenv");
-dotenv.config({ path: "./config/config.env" });
+const config = require("config");
+
+const apiKey1 = config.get("apiKeyForecast");
 
 const forecast = (latitude, longtitude, callback) => {
-  const url = `https://api.darksky.net/forecast/${process.env.API_KEY_FORECAST}/${latitude},${longtitude}?units=si`;
+  const url = `https://api.darksky.net/forecast/${apiKey1}/${latitude},${longtitude}?units=si`;
 
   request({ url, json: true }, (err, { body }) => {
     if (err) {
